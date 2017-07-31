@@ -1,0 +1,53 @@
+RewriteEngine on
+IndexIgnore *
+Options All -Indexes
+
+########## Begin 
+# 
+# Bloquear cualquier script intentando de setear un valor mosConfig a traves de la URL 
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D)  
+# Bloquear cualquier script que intente base64_encode para enviar via URL 
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\)  
+# Bloquear cualquier script que incluya una etiqueta <script> en la URL 
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR] 
+# Bloquear cualquier script que intente de setear alguna variable PHP GLOBALS via URL 
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2})  
+# Bloquear cualquier script que intente modificar una variable _REQUEST via URL 
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) 
+# Enviar todas las peticiones bloqueadas al homepage con un error 403! 
+RewriteRule ^(.*)$ index.php [F,L] 
+# 
+########## End
+
+
+#Block bad bots
+SetEnvIfNoCase user-Agent ^FrontPage [NC,OR]
+SetEnvIfNoCase user-Agent ^Java.* [NC,OR]
+SetEnvIfNoCase user-Agent ^Microsoft.URL [NC,OR]
+SetEnvIfNoCase user-Agent ^MSFrontPage [NC,OR]
+SetEnvIfNoCase user-Agent ^Offline.Explorer [NC,OR]
+SetEnvIfNoCase user-Agent ^[Ww]eb[Bb]andit [NC,OR]
+SetEnvIfNoCase user-Agent ^Zeus [NC]
+ 
+Order Allow,Deny
+Allow from all
+Deny from env=bad_bot
+
+##############################################################################################################
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ redir.php?key=$1 [QSA]
+
+
+
+RewriteRule ^tienda/product/([0-9]+)_([a-zA+Z0-9-]+)$ /resources/secciones/tienda/detalle-producto/detalle-producto.php?nombre_producto=$2&id_producto=$1 [QSA]
+
+#LINKS IMAGENES y DOCUMENTOS
+RewriteRule ^resources/uploads/productos/medium/([a-zA-Z0-9._-]+)$ /planen/resources/uploads/productos/medium/$1 [QSA]

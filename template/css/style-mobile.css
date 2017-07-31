@@ -1,0 +1,65 @@
+@media (max-width: 735px){
+section#banner-informative {
+    height: height: 60vh;
+    height: 60vh;
+}
+.text-title {
+    position: absolute;
+    top: inherit;
+    left: inherit;
+    transform: none;
+    z-index: 3;
+    text-align: center;
+}
+.text-title h1 {
+    font-family: obelixprobold_italic;
+    color: #FF5722;
+    text-shadow: 4px 2px black;
+    text-align: center;
+    font-size: 30px;
+}
+h1.title-clock {
+    font-family: obelixprobold_italic;
+    color: #17bbc3;
+    text-shadow: 4px 2px black;
+    text-align: center;
+    margin: 80px 0;
+}
+.text-title h2 {
+    font-family: obelixprobold_italic;
+    font-family: american_captainregular;
+    font-size: 65px;
+    color: white;
+    text-shadow: 4px 2px black;
+    font-size: 53px;
+}
+.scroll-down-absolute {
+    font-size: 33px;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    font-size: 90px;
+}
+ul.nav.nav-pills {
+    text-align: center;
+    width: 100%;
+    display: initial;
+}
+p#demo span {
+    display: block;
+}
+
+p#demo {
+    font-family: obelixprobold_italic;
+    color: #8BC34A;
+    text-shadow: 4px 2px black;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 100px;
+}
+h1.title-clock span {
+    font-family: american_captainregular;
+    font-size: 24px;
+    text-shadow: 4px 2px white;
+}
+}

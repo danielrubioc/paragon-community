@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+<title>Mini torneo Parag&oacute;n || Comunidad Parag&oacute;n PS4	Chile</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="fonts/obelixpro/stylesheet.css" />
+<link rel="stylesheet" href="fonts/american_captain/stylesheet.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style-mobile.css" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section id="banner-informative" class="info-global first-info">
+
+    	<div class="text-title">
+    		<h1>Mini torneo Parag&oacute;n </h1>
+            <h2>Comunidad Parag&oacute;n PS4 Chile</h2>
+    	</div>
+
+        <div class="scroll-down-absolute"> 
+            <a href="#" id="target">
+            <i class="fa fa-angle-double-down" aria-hidden="true"></i> 
+            </a>
+        </div>
+
+    </section>
+    <section id="banner-disputa" class="info-global first-info">
+        <div class="container" id="title1">
+            <h1 class="title-clock"> Recuerda enviarnos la informaci&oacute;n de tu equipo al correo  <br> <span>torneosparagonchile@gmail.com</span></h1>
+            
+            <h3>Fecha tope <br> mi&eacute;rcoles 02-08-2017 hasta las 00:00 PM</h3>
+            <div class="middle">
+                <hr>
+                <p id="demo" style="font-size:30px"></p>
+              </div>
+
+           
+
+
+
+        </div>
+
+    </section>
+    <footer>
+        <div class="container">
+            <p>Ante cualquier duda contactarnos a <span>torneosparagonchile@gmail.com</span></p>
+        </div>
+    </footer>
+
+
+
+<script type="text/javascript">
+$( "#target" ).click(function() {
+    $("html, body").animate({ scrollTop: $('#title1').offset().top }, 1000);
+});
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 2, 2017 00:00:00").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + " d&iacute;as <span>/</span>" + hours + " horas <span>/</span>"
+    + minutes + " minutos <span>/</span>" + seconds + " segundos";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+</body>
+</html>
