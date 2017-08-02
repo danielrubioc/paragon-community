@@ -1,11 +1,18 @@
 @media (max-width: 735px){
 section#banner-informative {
-    height: height: 60vh;
-    height: 60vh;
+       height: 100%;
+           width: 100%;
+    background: #010006;
 }
+.info-title-nav {
+    position: initial;
+    width: 100%;
+    display: inline-block;
+}
+
 .text-title {
     position: absolute;
-    top: inherit;
+    bottom: -83%;
     left: inherit;
     transform: none;
     z-index: 3;
@@ -24,6 +31,7 @@ h1.title-clock {
     text-shadow: 4px 2px black;
     text-align: center;
     margin: 80px 0;
+    margin-top: 469px;
 }
 .text-title h2 {
     font-family: obelixprobold_italic;
@@ -39,6 +47,7 @@ h1.title-clock {
     width: 80px;
     height: 80px;
     font-size: 90px;
+        top: 91%;
 }
 ul.nav.nav-pills {
     text-align: center;
@@ -62,4 +71,6 @@ h1.title-clock span {
     font-size: 24px;
     text-shadow: 4px 2px white;
 }
+
+
 }
