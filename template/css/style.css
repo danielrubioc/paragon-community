@@ -80,10 +80,11 @@ section#banner-informative {
 
 .text-title {
     position: absolute;
-    bottom: -200px;
+    /* bottom: -200px; */
     left: 50%;
+    top: -182px;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 9999999;
 }
 .text-title h2 {
     font-family: obelixprobold_italic;
@@ -103,20 +104,10 @@ section#banner-informative {
     
 }
 .scroll-down-absolute img {
-        /* font-size: 33px; */
-        /* margin: 0 auto; */
         width: 110px;
-        /* height: 80px; */
-        /* font-size: 111px; */
         line-height: 0;
         -webkit-animation: bounce 2s infinite ease-in-out;
         color: white;
-        /* position: absolute; */
-        z-index: 3;
-        /* position: absolute; */
-        /* top: 50%; */
-        /* left: 50%; */
-        /* transform: translate(-50%,-50%); */
         z-index: 3;
 }
 section#banner-informative:before {
@@ -177,8 +168,7 @@ h1.title-clock {
 }
 
 section#banner-disputa {
-    background: 73e9ea59b69ec36dc2fa9221927fead8-73e9ea59b69ec36dc2fa9221927fead8.jpg;
-    background: url(../images/73e9ea59b69ec36dc2fa9221927fead8-73e9ea59b69ec36dc2fa9221927fead8.jpg) no-repeat center center;
+    background: url(../images/backs/stone.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -186,6 +176,7 @@ section#banner-disputa {
     display: inline-block;
     width: 100%;
     margin-top: -11px;
+    position: relative;
 }
 
 .manage-clock-fight p {
@@ -355,23 +346,30 @@ p#demo {
 section#banner-disputa h3 {
     font-family: american_captainregular;
     font-size: 50px;
-    color: #F44336;
+    color: #de3232;
     text-shadow: 4px 2px black;
     text-align: center;
+    box-shadow: 0 0.5rem 2rem #000;
+    display: inline;
+    margin-top: -46px;
+    display: inline-block;
+    padding: 5px 30px;
+    background: transparent;
 }
 .logo-blank{
     box-shadow: 1px crimson;
     -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
-    /* box-shadow: 4px 4px 0px 0px rgba(50, 50, 50, 0.75); */
     background: rgba(0, 0, 0, 0.79);
     border-radius: 50%;
+    position: relative;
+    z-index: 9999;
+    display: inline-block;
 }
 .logo-black{
          box-shadow: 1px crimson;
     -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
-    /* box-shadow: 4px 4px 0px 0px rgba(50, 50, 50, 0.75); */
     background: rgba(0, 0, 0, 0.75);
     border-radius: 50%;
     max-width: 300px;
@@ -404,4 +402,95 @@ section#banner-disputa h3 {
     transform: translate(-50%,-50%);
     display: inline-block;
     z-index: 99999;
+}
+
+section#banner-disputa:before {
+    background: linear-gradient(180deg,#032c4e 0,transparent);
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 8;
+}
+
+section#banner-disputa:after {
+    background: linear-gradient(180deg,#032c4e 0,transparent);
+    content: '';
+    position: absolute;
+    top: -34px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    z-index: 8;
+}
+.team-match {
+    width: 100%;
+    margin-bottom: 100px;
+    display: inline-block;
+}
+.enfrent {
+    position: relative;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    min-height: 15.5rem;
+    width: 100%;
+    box-shadow: 0 0.5rem 2rem rgb(0, 0, 0);
+    background: rgba(72, 72, 72, 0.15);
+    cursor: pointer;
+}
+.full-btn-view {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a.view-more-team {
+    background: rgba(255, 0, 0, 0);
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #04ff69;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: .25s ease-in-out;
+    text-transform: uppercase;
+    font-family: american_captainregular;
+    font-size: 20px;
+}
+
+span.elo-promedio {
+    text-align: center;
+    display: block;
+    color: rgba(255, 117, 19, 0.96);
+    font-family: american_captainregular;
+    font-size: 36px;
+    margin-bottom: 41px;
+    display: inline-block;
+}
+.title-enfrent {
+    text-align: center;
+}
+span.elo-prod {
+    color: #e26715;
+    text-transform: uppercase;
+    font-family: obelixprobold_italic;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 9%;
+    border-bottom: 1px solid 闁煎墽绂�;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-24deg);
+    display: inline;
+    letter-spacing: 2px;
 }
